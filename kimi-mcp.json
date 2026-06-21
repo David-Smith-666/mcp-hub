@@ -1,0 +1,30 @@
+# ============================================================
+# Kimi MCP 配置 — Kimi 通过 Codex 的 CC Switch 代理连接
+# Kimi 使用和 Codex 相同的 MCP Server，因为它是通过 Codex 调用的
+# 如果 Kimi 有独立的 MCP 配置，可以使用以下 JSON 格式
+# ============================================================
+
+{
+  "mcpServers": {
+    "mcp-filesystem": {
+      "command": "C:\\Users\\夏云飞\\mcp-hub\\servers\\filesystem\\start.bat",
+      "env": {
+        "MCP_FS_ROOTS": "C:/Users/夏云飞;C:/Users/夏云飞/Projects;D:/"
+      }
+    },
+    "mcp-database": {
+      "command": "C:\\Users\\夏云飞\\mcp-hub\\servers\\database\\start.bat",
+      "env": {
+        "MCP_DB_PATH": "C:/Users/夏云飞/mcp-hub/shared.db"
+      }
+    },
+    "mcp-gateway": {
+      "command": "C:\\Users\\夏云飞\\mcp-hub\\servers\\gateway\\start.bat",
+      "env": {
+        "MCP_GATEWAY_TIMEOUT": "30000",
+        "MCP_GATEWAY_MAX_SIZE": "1048576",
+        "MCP_GATEWAY_ALLOWED": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+# ============================================================
+# Codex MCP 配置 — 添加到 C:\Users\夏云飞\.codex\config.toml
+# 将以下 4 个 [mcp_servers.xxx] 区块添加到现有 [mcp_servers] 之后
+# ============================================================
+
+[mcp_servers.mcp-filesystem]
+command = "npx"
+args = ["tsx", "C:/Users/夏云飞/mcp-hub/servers/filesystem/src/index.ts"]
+startup_timeout_sec = 30
+
+[mcp_servers.mcp-filesystem.env]
+MCP_FS_ROOTS = "C:/Users/夏云飞;C:/Users/夏云飞/Projects;D:/"
+
+[mcp_servers.mcp-database]
+command = "npx"
+args = ["tsx", "C:/Users/夏云飞/mcp-hub/servers/database/src/index.ts"]
+startup_timeout_sec = 30
+
+[mcp_servers.mcp-database.env]
+MCP_DB_PATH = "C:/Users/夏云飞/mcp-hub/shared.db"
+
+[mcp_servers.mcp-gateway]
+command = "npx"
+args = ["tsx", "C:/Users/夏云飞/mcp-hub/servers/gateway/src/index.ts"]
+startup_timeout_sec = 30
+
+[mcp_servers.mcp-gateway.env]
+MCP_GATEWAY_TIMEOUT = "30000"
+MCP_GATEWAY_MAX_SIZE = "1048576"
+MCP_GATEWAY_ALLOWED = ""
+
+[mcp_servers.mcp-task-bus]
+command = "npx"
+args = ["tsx", "C:/Users/夏云飞/mcp-hub/servers/task-bus/src/index.ts"]
+startup_timeout_sec = 30
+
+[mcp_servers.mcp-task-bus.env]
+MCP_DB_PATH = "C:/Users/夏云飞/mcp-hub/shared.db"

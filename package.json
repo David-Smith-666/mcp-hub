@@ -1,0 +1,12 @@
+{
+  "name": "mcp-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP Hub - 多 AI 工具共享 MCP Server 中枢",
+  "scripts": {
+    "fs": "npx tsx servers/filesystem/src/index.ts",
+    "db": "npx tsx servers/database/src/index.ts",
+    "gateway": "npx tsx servers/gateway/src/index.ts",
+    "install:all": "cd servers/filesystem && npm install && cd ../database && npm install && cd ../gateway && npm install"
+  }
+}
