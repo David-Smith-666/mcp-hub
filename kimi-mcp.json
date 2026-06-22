@@ -25,6 +25,12 @@
         "MCP_GATEWAY_MAX_SIZE": "1048576",
         "MCP_GATEWAY_ALLOWED": ""
       }
+    },
+    "mcp-task-bus": {
+      "command": "C:\\Users\\夏云飞\\mcp-hub\\servers\\task-bus\\start.bat",
+      "env": {
+        "MCP_DB_PATH": "C:/Users/夏云飞/mcp-hub/shared.db"
+      }
     }
   }
 }

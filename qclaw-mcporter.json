@@ -1,0 +1,38 @@
+{
+  "servers": {
+    "mcp-filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["tsx", "C:/Users/夏云飞/mcp-hub/servers/filesystem/src/index.ts"],
+      "env": {
+        "MCP_FS_ROOTS": "C:/Users/夏云飞;C:/Users/夏云飞/Projects;D:/"
+      }
+    },
+    "mcp-database": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["tsx", "C:/Users/夏云飞/mcp-hub/servers/database/src/index.ts"],
+      "env": {
+        "MCP_DB_PATH": "C:/Users/夏云飞/mcp-hub/shared.db"
+      }
+    },
+    "mcp-gateway": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["tsx", "C:/Users/夏云飞/mcp-hub/servers/gateway/src/index.ts"],
+      "env": {
+        "MCP_GATEWAY_TIMEOUT": "30000",
+        "MCP_GATEWAY_MAX_SIZE": "1048576",
+        "MCP_GATEWAY_ALLOWED": ""
+      }
+    },
+    "mcp-task-bus": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["tsx", "C:/Users/夏云飞/mcp-hub/servers/task-bus/src/index.ts"],
+      "env": {
+        "MCP_DB_PATH": "C:/Users/夏云飞/mcp-hub/shared.db"
+      }
+    }
+  }
+}
